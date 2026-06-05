@@ -268,7 +268,77 @@ p {
   gap: 0.875rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+// pip install block
+.hero-install {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 3rem;
+}
+
+.hero-install-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.42);
+  letter-spacing: 0.04em;
+}
+
+.hero-install-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem 0.65rem 1.1rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.15s ease;
+
+  &:hover { border-color: rgba(255, 255, 255, 0.22); }
+}
+
+.hero-install-prompt {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.hero-install-code {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  background: none;
+  padding: 0;
+}
+
+.hero-install-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+
+  &:hover {
+    color: $white;
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &.copied {
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.35);
+  }
 }
 
 .hero-stats {
