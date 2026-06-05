@@ -17,7 +17,8 @@ subtitle: Papers by and for the MadGraph collaboration.
 
   <div class="pub-tab-panel active" id="tab-main" role="tabpanel">
     <div class="publications-list">
-      {% for pub in site.data.publications.main %}
+      {% assign pubs_main = site.data.publications.main | sort: 'year' | reverse %}
+      {% for pub in pubs_main %}
       <article class="publication-item">
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
@@ -47,7 +48,8 @@ subtitle: Papers by and for the MadGraph collaboration.
 
   <div class="pub-tab-panel" id="tab-contributing" role="tabpanel">
     <div class="publications-list">
-      {% for pub in site.data.publications.contributing %}
+      {% assign pubs_contributing = site.data.publications.contributing | sort: 'year' | reverse %}
+      {% for pub in pubs_contributing %}
       <article class="publication-item">
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
@@ -77,7 +79,8 @@ subtitle: Papers by and for the MadGraph collaboration.
 
   <div class="pub-tab-panel" id="tab-external" role="tabpanel">
     <div class="publications-list">
-      {% for pub in site.data.publications.external %}
+      {% assign pubs_external = site.data.publications.external | sort: 'year' | reverse %}
+      {% for pub in pubs_external %}
       <article class="publication-item">
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
