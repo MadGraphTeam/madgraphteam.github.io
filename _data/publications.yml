@@ -21,3 +21,27 @@
   arxiv: "1106.0522"
   doi: "10.1007/JHEP06(2011)128"
   note: ""
+
+- title: "MadGraph/MadEvent v4: The New Web Generation"
+  authors: "J. Alwall, P. Demin, S. de Visscher, R. Frederix, M. Herquet, F. Maltoni, T. Plehn, D. L. Rainwater, T. Stelzer"
+  journal: "JHEP 09 (2007) 028"
+  year: 2007
+  arxiv: "0706.2334"
+  doi: "10.1088/1126-6708/2007/09/028"
+  note: ""
+
+- title: "MadEvent: Automatic Event Generation with MadGraph"
+  authors: "F. Maltoni, T. Stelzer"
+  journal: "JHEP 02 (2003) 027"
+  year: 2003
+  arxiv: "hep-ph/0208156"
+  doi: "10.1088/1126-6708/2003/02/027"
+  note: ""
+
+- title: "Automatic Generation of Tree Level Helicity Amplitudes"
+  authors: "T. Stelzer, W. F. Long"
+  journal: "Comput. Phys. Commun. 81 (1994) 357"
+  year: 1994
+  arxiv: "hep-ph/9401258"
+  doi: "10.1016/0010-4655(94)90084-1"
+  note: ""
