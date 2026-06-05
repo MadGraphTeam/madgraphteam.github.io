@@ -1,47 +1,154 @@
-- title: "MadGraph7: A new generation of automated Monte Carlo event simulation"
-  authors: "MadGraph Collaboration"
-  journal: ""
-  year: 2026
-  arxiv: ""
-  doi: ""
-  note: "In preparation"
+main:
+  - title: "MadGraph7: A new generation of automated Monte Carlo event simulation"
+    authors: "MadGraph Collaboration"
+    journal: ""
+    year: 2026
+    arxiv: ""
+    doi: ""
+    note: "In preparation"
 
-- title: "The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton showers"
-  authors: "J. Alwall, R. Frederix, S. Frixione, V. Hirschi, F. Maltoni, O. Mattelaer, H.-S. Shao, T. Stelzer, P. Torrielli, M. Zaro"
-  journal: "JHEP 07 (2014) 079"
-  year: 2014
-  arxiv: "1405.0301"
-  doi: "10.1007/JHEP07(2014)079"
-  note: ""
+  - title: "The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton showers"
+    authors: "J. Alwall, R. Frederix, S. Frixione, V. Hirschi, F. Maltoni, O. Mattelaer, H.-S. Shao, T. Stelzer, P. Torrielli, M. Zaro"
+    journal: "JHEP 07 (2014) 079"
+    year: 2014
+    arxiv: "1405.0301"
+    doi: "10.1007/JHEP07(2014)079"
+    note: ""
 
-- title: "MadGraph 5: Going Beyond"
-  authors: "J. Alwall, M. Herquet, F. Maltoni, O. Mattelaer, T. Stelzer"
-  journal: "JHEP 06 (2011) 128"
-  year: 2011
-  arxiv: "1106.0522"
-  doi: "10.1007/JHEP06(2011)128"
-  note: ""
+  - title: "The automation of next-to-leading order electroweak calculations"
+    authors: "R. Frederix, S. Frixione, V. Hirschi, D. Pagani, H.-S. Shao, M. Zaro"
+    journal: "JHEP 07 (2018) 185"
+    year: 2018
+    arxiv: "1804.10017"
+    doi: "10.1007/JHEP07(2018)185"
+    note: ""
 
-- title: "MadGraph/MadEvent v4: The New Web Generation"
-  authors: "J. Alwall, P. Demin, S. de Visscher, R. Frederix, M. Herquet, F. Maltoni, T. Plehn, D. L. Rainwater, T. Stelzer"
-  journal: "JHEP 09 (2007) 028"
-  year: 2007
-  arxiv: "0706.2334"
-  doi: "10.1088/1126-6708/2007/09/028"
-  note: ""
+  - title: "MadGraph 5: Going Beyond"
+    authors: "J. Alwall, M. Herquet, F. Maltoni, O. Mattelaer, T. Stelzer"
+    journal: "JHEP 06 (2011) 128"
+    year: 2011
+    arxiv: "1106.0522"
+    doi: "10.1007/JHEP06(2011)128"
+    note: ""
 
-- title: "MadEvent: Automatic Event Generation with MadGraph"
-  authors: "F. Maltoni, T. Stelzer"
-  journal: "JHEP 02 (2003) 027"
-  year: 2003
-  arxiv: "hep-ph/0208156"
-  doi: "10.1088/1126-6708/2003/02/027"
-  note: ""
+  - title: "MadGraph/MadEvent v4: The New Web Generation"
+    authors: "J. Alwall, P. Demin, S. de Visscher, R. Frederix, M. Herquet, F. Maltoni, T. Plehn, D. L. Rainwater, T. Stelzer"
+    journal: "JHEP 09 (2007) 028"
+    year: 2007
+    arxiv: "0706.2334"
+    doi: "10.1088/1126-6708/2007/09/028"
+    note: ""
 
-- title: "Automatic Generation of Tree Level Helicity Amplitudes"
-  authors: "T. Stelzer, W. F. Long"
-  journal: "Comput. Phys. Commun. 81 (1994) 357"
-  year: 1994
-  arxiv: "hep-ph/9401258"
-  doi: "10.1016/0010-4655(94)90084-1"
-  note: ""
+  - title: "MadEvent: Automatic Event Generation with MadGraph"
+    authors: "F. Maltoni, T. Stelzer"
+    journal: "JHEP 02 (2003) 027"
+    year: 2003
+    arxiv: "hep-ph/0208156"
+    doi: "10.1088/1126-6708/2003/02/027"
+    note: ""
+
+  - title: "Automatic Generation of Tree Level Helicity Amplitudes"
+    authors: "T. Stelzer, W. F. Long"
+    journal: "Comput. Phys. Commun. 81 (1994) 357"
+    year: 1994
+    arxiv: "hep-ph/9401258"
+    doi: "10.1016/0010-4655(94)90084-1"
+    note: ""
+
+contributing:
+  - title: "MadSpace — Event Generation for the Era of GPUs and ML"
+    authors: "T. Heimel, O. Mattelaer, R. Winterhalder"
+    journal: ""
+    year: 2026
+    arxiv: "2602.06895"
+    doi: ""
+    note: "Submitted"
+
+  - title: "Data-parallel leading-order event generation in MadGraph5_aMC@NLO"
+    authors: "S. Hageböck, D. Massaro, O. Mattelaer, S. Roiser, A. Valassi, Z. Wettersten"
+    journal: ""
+    year: 2025
+    arxiv: "2507.21039"
+    doi: ""
+    note: "Submitted"
+
+  - title: "MadNIS Reloaded"
+    authors: "T. Heimel, R. Winterhalder, A. Butter, J. Isaacson, C. Krause, F. Maltoni, O. Mattelaer, T. Plehn"
+    journal: "SciPost Phys. 17 (2024) 023"
+    year: 2024
+    arxiv: "2311.01548"
+    doi: "10.21468/SciPostPhys.17.1.023"
+    note: ""
+
+  - title: "MadNIS — Neural Multi-Channel Importance Sampling"
+    authors: "T. Heimel, R. Winterhalder, A. Butter, J. Isaacson, C. Krause, F. Maltoni, O. Mattelaer, T. Plehn"
+    journal: "SciPost Phys. 15 (2023) 141"
+    year: 2023
+    arxiv: "2212.06172"
+    doi: "10.21468/SciPostPhys.15.4.141"
+    note: ""
+
+  - title: "Automated event generation for loop-induced processes"
+    authors: "V. Hirschi, O. Mattelaer"
+    journal: "JHEP 10 (2015) 146"
+    year: 2015
+    arxiv: "1507.00020"
+    doi: "10.1007/JHEP10(2015)146"
+    note: ""
+
+external:
+  - title: "FeynRules 2.0 — A complete toolbox for tree-level phenomenology"
+    authors: "A. Alloul, N. D. Christensen, C. Degrande, C. Duhr, B. Fuks"
+    journal: "Comput. Phys. Commun. 185 (2014) 2250"
+    year: 2014
+    arxiv: "1310.1921"
+    doi: "10.1016/j.cpc.2014.04.012"
+    note: ""
+
+  - title: "OpenLoops 2"
+    authors: "F. Buccioni, J.-N. Lang, J. M. Lindert, P. Maierhöfer, S. Pozzorini, H. Zhang, M. F. Zoller"
+    journal: "Eur. Phys. J. C 79 (2019) 866"
+    year: 2019
+    arxiv: "1907.13071"
+    doi: "10.1140/epjc/s10052-019-7306-2"
+    note: ""
+
+  - title: "Herwig 7.0 / Herwig++ 3.0 release note"
+    authors: "J. Bellm, S. Gieseke, D. Grellscheid, S. Plätzer et al."
+    journal: "Eur. Phys. J. C 76 (2016) 196"
+    year: 2016
+    arxiv: "1512.01178"
+    doi: "10.1140/epjc/s10052-016-4018-8"
+    note: ""
+
+  - title: "LHAPDF6: parton density access in the LHC precision era"
+    authors: "A. Buckley, J. Ferrando, S. Lloyd, K. Nordstrom, B. Page, M. Ruefenacht, M. Schoenherr, G. Watt"
+    journal: "Eur. Phys. J. C 75 (2015) 132"
+    year: 2015
+    arxiv: "1412.7420"
+    doi: "10.1140/epjc/s10052-015-3318-8"
+    note: ""
+
+  - title: "An introduction to PYTHIA 8.2"
+    authors: "T. Sjöstrand, S. Ask, J. R. Christiansen, R. Corke, N. Desai, P. Ilten, S. Mrenna, S. Prestel, C. O. Rasmussen, P. Z. Skands"
+    journal: "Comput. Phys. Commun. 191 (2015) 159"
+    year: 2015
+    arxiv: "1410.3012"
+    doi: "10.1016/j.cpc.2015.01.024"
+    note: ""
+
+  - title: "FastJet user manual"
+    authors: "M. Cacciari, G. P. Salam, G. Soyez"
+    journal: "Eur. Phys. J. C 72 (2012) 1896"
+    year: 2012
+    arxiv: "1111.6097"
+    doi: "10.1140/epjc/s10052-012-1896-2"
+    note: ""
+
+  - title: "MadAnalysis 5, a user-friendly framework for collider phenomenology"
+    authors: "E. Conte, B. Fuks, G. Serret"
+    journal: "Comput. Phys. Commun. 184 (2013) 222"
+    year: 2013
+    arxiv: "1206.1599"
+    doi: "10.1016/j.cpc.2012.09.009"
+    note: ""
