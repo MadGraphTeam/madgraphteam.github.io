@@ -3,82 +3,86 @@ institutions:
     location: Bern, Switzerland
     members:
       - name: Valentin Hirschi
-        role: EW Corrections
-        url:
-        photo:
+        role: Loop amplitude automation (MadLoop)
+        url: https://www.itp.unibe.ch/about_us/people/people/index_eng.html?id=248
+        photo: /assets/images/team/valentin-hirschi.jpg
 
   - name: Bologna University
     location: Bologna, Italy
     members:
       - name: Davide Pagani
-        role: EW Corrections
-        url:
-        photo:
+        role: NLO electroweak corrections
+        url: https://www.unibo.it/sitoweb/davide.pagani5/en
+        photo: /assets/images/team/davide-pagani.png
 
   - name: CERN
     location: Geneva, Switzerland
     members:
       - name: Stefano Frixione
-        role: Loop Amplitudes
-        url:
-        photo:
+        role: MC@NLO matching & FKS subtraction
+        url: https://th-dep.web.cern.ch/roster/frixione-stefano
+        photo: /assets/images/team/stefano-frixione.jpg
       - name: Daniele Massaro
-        role: Lead Developer
-        url:
-        photo:
+        role: GPU acceleration (CUDACPP)
+        url: https://github.com/Qubitol
+        photo: /assets/images/team/daniele-massaro.png
       - name: Stefan Roiser
-        role: NLO Calculations
-        url:
-        photo:
+        role: GPU/vector-CPU reengineering
+        url: https://hepsoftwarefoundation.org/profiles/stefan_roiser.html
+        photo: /assets/images/team/stefan-roiser.jpg
 
   - name: CP3, UCLouvain
     location: Louvain-la-Neuve, Belgium
     members:
       - name: Theo Heimel
-        role: PDF Interfaces
-        url:
-        photo:
+        role: MadNIS & MadSpace
+        url: https://theoheimel.com/
+        photo: /assets/images/team/theo-heimel.png
       - name: Fabio Maltoni
-        role: Parton Shower Matching
-        url:
-        photo:
+        role: Original developer & scientific lead
+        url: https://cp3.irmp.ucl.ac.be/public/member/41
+        photo: /assets/images/team/fabio-maltoni.jpg
       - name: Olivier Mattelaer
-        role: PDF Interfaces
-        url:
-        photo:
+        role: Principal maintainer, loop-induced processes
+        url: https://cp3.irmp.ucl.ac.be/public/member/38
+        photo: /assets/images/team/olivier-mattelaer.jpg
 
   - name: IFJ PAN
     location: Krakow, Poland
     members:
       - name: Richard Ruiz
-        role: EW Corrections
-        url:
-        photo:
+        role: BSM models & heavy neutrino production
+        url: https://th.ifj.edu.pl/rruiz/
+        photo: /assets/images/team/richard-ruiz.jpg
 
   - name: LPTHE
     location: Paris, France
     members:
       - name: Hua-Sheng Shao
-        role: EW Corrections
-        url:
-        photo:
+        role: Quarkonium production automation
+        url: http://www.lpthe.jussieu.fr/~hshao/
+        photo: /assets/images/team/hua-sheng-shao.jpg
 
   - name: Lund University
     location: Lund, Sweden
     members:
       - name: Rikkert Frederix
-        role: EW Corrections
-        url:
-        photo:
+        role: FxFx NLO multi-jet merging
+        url: https://www.particle-nuclear.lu.se/rikkert-frederix
+        photo: /assets/images/team/rikkert-frederix.webp
+      - name: Timea Vitos
+        role: EW Sudakov logarithms & multi-parton event generation
+        url: https://www.lunduniversity.lu.se/lucat/user/e1d79104e305b7208704a70b77dbc483
+        photo: /assets/images/team/timea-vitos.webp
 
   - name: Milan University
     location: Milan, Italy
     members:
       - name: Ramon Winterhalder
-        role: Phenomenology
-        url:
-        photo:
+        role: MadNIS neural importance sampling
+        url: https://www.rpwinterhalder.com/
+        photo: /assets/images/team/ramon-winterhalder.jpg
       - name: Marco Zaro
-        role: BSM Models
-        url:
-        photo:
+        role: NLO electroweak corrections automation
+        url: https://pcteserver.mi.infn.it/~mzaro/index.html
+        photo: /assets/images/team/marco-zaro.png
