@@ -4,7 +4,8 @@ title: Team
 subtitle: An international collaboration of particle physicists advancing Monte Carlo simulation.
 ---
 
-{% for institution in site.data.team.institutions %}
+{% assign sorted_institutions = site.data.team.institutions | sort: 'name' %}
+{% for institution in sorted_institutions %}
 <div class="institution-block">
 
   <div class="institution-header">
@@ -18,16 +19,16 @@ subtitle: An international collaboration of particle physicists advancing Monte 
       <div class="institution-name">{{ institution.name }}</div>
       <div class="institution-location">{{ institution.location }}</div>
     </div>
-    {% if institution.url %}
-    <a href="{{ institution.url }}" class="institution-link" target="_blank" rel="noopener noreferrer">
-      Visit website ↗
-    </a>
-    {% endif %}
   </div>
 
   <div class="members-grid">
-    {% for member in institution.members %}
+    {% assign sorted_members = institution.members | sort: 'name' %}
+    {% for member in sorted_members %}
+    {% if member.url %}
+    <a href="{{ member.url }}" class="member-card" target="_blank" rel="noopener noreferrer">
+    {% else %}
     <div class="member-card">
+    {% endif %}
       <div class="member-photo-wrap">
         {% if member.photo %}
         <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
@@ -44,7 +45,11 @@ subtitle: An international collaboration of particle physicists advancing Monte 
         <div class="member-name">{{ member.name }}</div>
         <div class="member-role">{{ member.role }}</div>
       </div>
+    {% if member.url %}
+    </a>
+    {% else %}
     </div>
+    {% endif %}
     {% endfor %}
   </div>
 
