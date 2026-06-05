@@ -1,0 +1,50 @@
+institutions:
+  - name: CERN
+    location: Geneva, Switzerland
+    url: https://home.cern
+    members:
+      - name: Firstname Lastname
+        role: Lead Developer
+        photo:
+      - name: Firstname Lastname
+        role: NLO Calculations
+        photo:
+      - name: Firstname Lastname
+        role: Loop Amplitudes
+        photo:
+
+  - name: ETH Zürich
+    location: Zürich, Switzerland
+    url: https://ethz.ch
+    members:
+      - name: Firstname Lastname
+        role: Parton Shower Matching
+        photo:
+      - name: Firstname Lastname
+        role: PDF Interfaces
+        photo:
+
+  - name: MIT
+    location: Cambridge, MA, USA
+    url: https://mit.edu
+    members:
+      - name: Firstname Lastname
+        role: Phenomenology
+        photo:
+      - name: Firstname Lastname
+        role: BSM Models
+        photo:
+      - name: Firstname Lastname
+        role: Detector Simulation
+        photo:
+
+  - name: University of Edinburgh
+    location: Edinburgh, UK
+    url: https://ed.ac.uk
+    members:
+      - name: Firstname Lastname
+        role: EW Corrections
+        photo:
+      - name: Firstname Lastname
+        role: GPU Acceleration
+        photo:

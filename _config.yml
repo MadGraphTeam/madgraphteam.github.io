@@ -1,0 +1,22 @@
+title: MadGraph Collaboration
+description: >
+  Advanced Monte Carlo event generation for the Large Hadron Collider,
+  developed by an international collaboration of particle physicists.
+baseurl: ""
+url: "https://madgraph.org"
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+# External links
+github_url: "https://github.com/MadGraphTeam/MadGraph7"
+docs_url: "https://docs.madgraph.org"
+download_url: "https://github.com/MadGraphTeam/MadGraph7/releases/latest"

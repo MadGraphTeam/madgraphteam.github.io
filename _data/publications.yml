@@ -1,0 +1,39 @@
+- title: "MadGraph7: A new generation of automated Monte Carlo event simulation"
+  authors: "MadGraph Collaboration"
+  journal: ""
+  year: 2025
+  arxiv: ""
+  doi: ""
+  note: "In preparation"
+
+- title: "The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton showers"
+  authors: "J. Alwall, R. Frederix, S. Frixione, V. Hirschi, F. Maltoni, O. Mattelaer, H.-S. Shao, T. Stelzer, P. Torrielli, M. Zaro"
+  journal: "JHEP 07 (2014) 079"
+  year: 2014
+  arxiv: "1405.0301"
+  doi: "10.1007/JHEP07(2014)079"
+  note: ""
+
+- title: "Merging meets matching in MC@NLO"
+  authors: "R. Frederix, S. Frixione"
+  journal: "JHEP 12 (2012) 061"
+  year: 2012
+  arxiv: "1209.6215"
+  doi: "10.1007/JHEP12(2012)061"
+  note: ""
+
+- title: "Comparative study of various algorithms for the merging of parton showers and matrix elements in hadronic collisions"
+  authors: "J. Alwall et al."
+  journal: "Eur. Phys. J. C 53 (2008) 473"
+  year: 2008
+  arxiv: "0706.2569"
+  doi: "10.1140/epjc/s10052-007-0490-5"
+  note: ""
+
+- title: "MadGraph 5: Going Beyond"
+  authors: "J. Alwall, M. Herquet, F. Maltoni, O. Mattelaer, T. Stelzer"
+  journal: "JHEP 06 (2011) 128"
+  year: 2011
+  arxiv: "1106.0522"
+  doi: "10.1007/JHEP06(2011)128"
+  note: ""

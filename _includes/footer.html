@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <div class="logo-placeholder" aria-hidden="true"></div>
+      <span class="footer-site-name">MadGraph Collaboration</span>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/team/' | relative_url }}">Team</a>
+      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="{{ site.docs_url }}" target="_blank" rel="noopener noreferrer">Docs</a>
+    </nav>
+
+    <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} MadGraph Collaboration. All rights reserved.</p>
+
+  </div>
+</footer>
