@@ -47,6 +47,14 @@ institutions:
         url: https://cp3.irmp.ucl.ac.be/public/member/38
         photo: /assets/images/team/olivier-mattelaer.jpg
 
+  - name: Heidelberg University
+    location: Heidelberg, Germany
+    members:
+      - name: Tilman Plehn
+        role: ML methods for event generation
+        url: https://www.thphys.uni-heidelberg.de/~plehn/
+        photo: /assets/images/team/tilman-plehn.jpg
+
   - name: IFJ PAN
     location: Krakow, Poland
     members:
