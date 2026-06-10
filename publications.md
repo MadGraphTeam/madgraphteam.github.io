@@ -114,17 +114,27 @@ subtitle: Papers by and for the MadGraph collaboration.
 (function() {
   var buttons = document.querySelectorAll('.pub-tab-btn');
   var panels  = document.querySelectorAll('.pub-tab-panel');
+
+  function activate(tab) {
+    buttons.forEach(function(b) {
+      var match = b.dataset.tab === tab;
+      b.classList.toggle('active', match);
+      b.setAttribute('aria-selected', String(match));
+    });
+    panels.forEach(function(p) { p.classList.remove('active'); });
+    var panel = document.getElementById('tab-' + tab);
+    if (panel) panel.classList.add('active');
+  }
+
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
-      buttons.forEach(function(b) {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      panels.forEach(function(p) { p.classList.remove('active'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      history.replaceState(null, '', '#' + btn.dataset.tab);
+      activate(btn.dataset.tab);
     });
   });
+
+  var hash = location.hash.replace('#', '');
+  var valid = Array.from(buttons).some(function(b) { return b.dataset.tab === hash; });
+  if (valid) activate(hash);
 })();
 </script>
