@@ -40,4 +40,4 @@ mg7_issues_url:   "https://github.com/MadGraphTeam/MadGraph7/issues"
 madboard_url:     "https://github.com/MadGraphTeam/MadBoard"
 # TODO: point this at the real MadGraph7 release once available.
 # Placeholder: MadSpace stable releases.
-mg7_download_url: "https://github.com/MadGraphTeam/MadSpace/releases"
+mg7_download_url: "https://github.com/MadGraphTeam/MadGraph7/releases"
