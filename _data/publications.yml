@@ -56,6 +56,22 @@ main:
     note: ""
 
 contributing:
+  - title: "Event generation with exponential scaling in multiplicity using AmpliCol"
+    authors: "R. Frederix, T. Vitos"
+    journal: ""
+    year: 2026
+    arxiv: "2601.19483"
+    doi: ""
+    note: "Submitted"
+
+  - title: "Leading-colour-based unweighted event generation for multi-parton tree-level processes"
+    authors: "R. Frederix, T. Vitos"
+    journal: ""
+    year: 2024
+    arxiv: "2409.12128"
+    doi: ""
+    note: "Submitted"
+
   - title: "MadSpace — Event Generation for the Era of GPUs and ML"
     authors: "T. Heimel, O. Mattelaer, R. Winterhalder"
     journal: ""

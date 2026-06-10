@@ -19,7 +19,7 @@ subtitle: Papers by and for the MadGraph collaboration.
     <div class="publications-list">
       {% assign pubs_main = site.data.publications.main | sort: 'year' | reverse %}
       {% for pub in pubs_main %}
-      <article class="publication-item">
+      <article class="publication-item" {% if pub.arxiv != '' %}id="pub-{{ pub.arxiv | replace: '/', '-' }}"{% endif %}>
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
           <h2 class="pub-title">{{ pub.title }}</h2>
@@ -50,7 +50,7 @@ subtitle: Papers by and for the MadGraph collaboration.
     <div class="publications-list">
       {% assign pubs_contributing = site.data.publications.contributing | sort: 'year' | reverse %}
       {% for pub in pubs_contributing %}
-      <article class="publication-item">
+      <article class="publication-item" {% if pub.arxiv != '' %}id="pub-{{ pub.arxiv | replace: '/', '-' }}"{% endif %}>
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
           <h2 class="pub-title">{{ pub.title }}</h2>
@@ -81,7 +81,7 @@ subtitle: Papers by and for the MadGraph collaboration.
     <div class="publications-list">
       {% assign pubs_external = site.data.publications.external | sort: 'year' | reverse %}
       {% for pub in pubs_external %}
-      <article class="publication-item">
+      <article class="publication-item" {% if pub.arxiv != '' %}id="pub-{{ pub.arxiv | replace: '/', '-' }}"{% endif %}>
         <div class="pub-header">
           <span class="pub-year">{{ pub.year }}</span>
           <h2 class="pub-title">{{ pub.title }}</h2>
@@ -126,6 +126,28 @@ subtitle: Papers by and for the MadGraph collaboration.
     if (panel) panel.classList.add('active');
   }
 
+  function highlightPub(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var panel = el.closest('.pub-tab-panel');
+    if (panel) activate(panel.id.replace('tab-', ''));
+    requestAnimationFrame(function() {
+      el.scrollIntoView({ block: 'center' });
+      el.classList.add('pub-highlighted');
+    });
+  }
+
+  function handleHash() {
+    var hash = location.hash.replace('#', '');
+    if (!hash) return;
+    if (hash.startsWith('pub-')) {
+      highlightPub(hash);
+    } else {
+      var valid = Array.from(buttons).some(function(b) { return b.dataset.tab === hash; });
+      if (valid) activate(hash);
+    }
+  }
+
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
       history.replaceState(null, '', '#' + btn.dataset.tab);
@@ -133,8 +155,7 @@ subtitle: Papers by and for the MadGraph collaboration.
     });
   });
 
-  var hash = location.hash.replace('#', '');
-  var valid = Array.from(buttons).some(function(b) { return b.dataset.tab === hash; });
-  if (valid) activate(hash);
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
 })();
 </script>
