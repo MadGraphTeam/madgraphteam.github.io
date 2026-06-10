@@ -23,9 +23,10 @@ plugins:
 mg5_version: "3.7.1"
 
 # Primary links
-github_url:    "https://github.com/mg5amcnlo/mg5amcnlo"        # MadGraph5_aMC@NLO source (3.x)
-download_url:  "https://launchpad.net/mg5amcnlo"               # legacy release downloads
-docs_url:      "https://docs.madgraph.org"                     # MadGraph7 documentation
+github_url:       "https://github.com/mg5amcnlo/mg5amcnlo"        # MadGraph5_aMC@NLO source (3.x)
+download_url:     "https://launchpad.net/mg5amcnlo"               # legacy release downloads
+docs_url:         "https://docs.madgraph.org"                     # MadGraph7 documentation
+docs_install_url: "https://docs.madgraph.org/en/latest/installation.html" # Install instructions
 
 # Resource / mirror links (used on the home page)
 launchpad_url:  "https://launchpad.net/mg5amcnlo"
