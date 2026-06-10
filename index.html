@@ -183,86 +183,102 @@ title: MadGraph Collaboration
 <!-- Core capabilities -->
 <section class="about">
   <div class="container">
-    <div class="about-grid">
-
-      <div>
-        <div class="section-label">Core capabilities</div>
-        <h2 class="section-title">A complete framework for collider phenomenology</h2>
-        <p class="section-lead">
-          MadGraph7 carries forward the full physics of the MadGraph5_aMC@NLO line —
-          automated matrix elements and Monte&nbsp;Carlo simulation, from leading order for any
-          user-defined Lagrangian to next-to-leading order for models that support it.
-        </p>
-
-        <ul class="feature-list">
-          <li class="feature-item">
-            <div class="feature-icon">
-              <!-- NLO: loop / vertex diagram -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="3.5"/>
-                <path d="M3 6 9.1 10.1M3 18 9.1 13.9M21 6 14.9 10.1M21 18 14.9 13.9"/>
-              </svg>
-            </div>
-            <div>
-              <div class="feature-title">Automated NLO calculations</div>
-              <p class="feature-desc">NLO QCD and electroweak corrections to Standard Model processes, with MC@NLO matching to parton showers and FxFx multi-jet merging.</p>
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="feature-icon">
-              <!-- BSM: layered / modular models -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 2.5 2.5 7 12 11.5 21.5 7 12 2.5z"/>
-                <path d="M2.5 12 12 16.5 21.5 12"/>
-                <path d="M2.5 17 12 21.5 21.5 17"/>
-              </svg>
-            </div>
-            <div>
-              <div class="feature-title">Any model, including BSM</div>
-              <p class="feature-desc">Simulate any user-defined Lagrangian through the UFO model format, with models from FeynRules for beyond-the-Standard-Model studies.</p>
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="feature-icon">
-              <!-- Parton shower: branching cascade -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="4" r="1.6"/>
-                <circle cx="6.5" cy="13" r="1.6"/><circle cx="17.5" cy="13" r="1.6"/>
-                <circle cx="3.5" cy="20" r="1.3"/><circle cx="9.5" cy="20" r="1.3"/>
-                <circle cx="14.5" cy="20" r="1.3"/><circle cx="20.5" cy="20" r="1.3"/>
-                <path d="M11 5.3 7.5 11.6M13 5.3 16.5 11.6M5.8 14.5 4.2 18.6M7.2 14.5 8.8 18.6M16.8 14.5 15.2 18.6M18.2 14.5 19.8 18.6"/>
-              </svg>
-            </div>
-            <div>
-              <div class="feature-title">Parton-shower matching</div>
-              <p class="feature-desc">Standard Les Houches event output with automated interfaces to Pythia8 and Herwig for complete event-simulation chains.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="info-card">
-          <div class="info-card-label">Inside MadGraph</div>
-          <ul class="info-card-list">
-            <li>Tree-level &amp; one-loop matrix elements for arbitrary processes</li>
-            <li>NLO QCD and electroweak corrections (Standard Model)</li>
-            <li>Parton-shower matching (MC@NLO) and multi-jet merging (FxFx, MLM)</li>
-            <li>Loop-induced processes via MadLoop</li>
-            <li>Spin-correlated decays with MadSpin</li>
-            <li>Python&nbsp;3 command interface and scriptable runs</li>
-          </ul>
-          <a href="{{ site.docs_url }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center;">
-            Read the documentation
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
+    <div class="about-head">
+      <div class="section-label">Core capabilities</div>
+      <h2 class="section-title">A complete framework for collider phenomenology</h2>
+      <p class="section-lead">
+        MadGraph7 carries forward the full physics of the MadGraph5_aMC@NLO line —
+        automated matrix elements and Monte&nbsp;Carlo simulation, from leading order for any
+        user-defined Lagrangian to next-to-leading order for models that support it.
+      </p>
     </div>
+
+    <ul class="feature-grid">
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4 20 20M20 4 4 20"/><circle cx="12" cy="12" r="2.3" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Automated matrix elements</div>
+          <p class="feature-desc">Tree-level and one-loop amplitudes for arbitrary processes, including loop-induced ones through MadLoop.</p>
+        </div>
+      </li>
+
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.5"/><path d="M3 6 9.1 10.1M3 18 9.1 13.9M21 6 14.9 10.1M21 18 14.9 13.9"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">NLO QCD &amp; electroweak</div>
+          <p class="feature-desc">Next-to-leading-order corrections in QCD and the electroweak sector for Standard Model processes.</p>
+        </div>
+      </li>
+
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="4" r="1.6"/><circle cx="6.5" cy="13" r="1.6"/><circle cx="17.5" cy="13" r="1.6"/>
+            <circle cx="3.5" cy="20" r="1.3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="14.5" cy="20" r="1.3"/><circle cx="20.5" cy="20" r="1.3"/>
+            <path d="M11 5.3 7.5 11.6M13 5.3 16.5 11.6M5.8 14.5 4.2 18.6M7.2 14.5 8.8 18.6M16.8 14.5 15.2 18.6M18.2 14.5 19.8 18.6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Parton-shower matching</div>
+          <p class="feature-desc">MC@NLO matching to Pythia8 and Herwig with FxFx and MLM multi-jet merging, via standard Les Houches output.</p>
+        </div>
+      </li>
+
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2.5 2.5 7 12 11.5 21.5 7 12 2.5z"/><path d="M2.5 12 12 16.5 21.5 12"/><path d="M2.5 17 12 21.5 21.5 17"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Any model, including BSM</div>
+          <p class="feature-desc">Simulate any user-defined Lagrangian through the UFO model format, with models from FeynRules.</p>
+        </div>
+      </li>
+
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="1.7" fill="currentColor" stroke="none"/>
+            <path d="M12 4.2a7.8 7.8 0 0 1 6.8 4"/><path d="M12 19.8a7.8 7.8 0 0 1-6.8-4"/>
+            <polyline points="18.8 4 19.1 8.2 15 8"/><polyline points="5.2 20 4.9 15.8 9 16"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Spin-correlated decays</div>
+          <p class="feature-desc">Decays of intermediate resonances with full spin correlations using MadSpin.</p>
+        </div>
+      </li>
+
+      <li class="feature-item">
+        <div class="feature-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><line x1="13" y1="15" x2="17" y2="15"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Python&nbsp;3 interface</div>
+          <p class="feature-desc">A scriptable Python&nbsp;3 command interface for automated, reproducible runs.</p>
+        </div>
+      </li>
+    </ul>
+
+    <!-- <div class="about-cta">
+      <a href="{{ site.docs_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+        Read the documentation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div> -->
   </div>
 </section>
 

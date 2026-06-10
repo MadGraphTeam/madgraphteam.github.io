@@ -509,6 +509,24 @@ h1.hero-headline { margin-top: 0; }
 
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 
+.about-head { text-align: center; max-width: 640px; margin: 0 auto 2.75rem; }
+.about-head .section-lead { margin: 0.85rem auto 0; }
+
+.feature-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.85rem 2.5rem;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
+.about-cta { text-align: center; margin-top: 2.75rem; }
+
 .feature-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
 .feature-item { display: flex; gap: 1rem; align-items: flex-start; }
 
