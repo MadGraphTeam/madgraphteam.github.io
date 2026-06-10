@@ -2,7 +2,8 @@
   <div class="container footer-inner">
 
     <div class="footer-brand">
-      <img src="{{ '/assets/images/logo_dark.svg' | relative_url }}" alt="MadGraph logo" class="footer-logo">
+      <img src="{{ '/assets/images/logo_light.svg' | relative_url }}" alt="MadGraph logo" class="footer-logo logo-light">
+      <img src="{{ '/assets/images/logo_dark.svg'  | relative_url }}" alt="" aria-hidden="true" class="footer-logo logo-dark">
       <span class="footer-site-name">MadGraph Collaboration</span>
     </div>
 
@@ -10,11 +11,15 @@
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/team/' | relative_url }}">Team</a>
       <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a href="{{ site.download_url }}" target="_blank" rel="noopener noreferrer">Download</a>
       <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="{{ site.docs_url }}" target="_blank" rel="noopener noreferrer">Docs</a>
     </nav>
 
-    <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} MadGraph Collaboration. All rights reserved.</p>
+    <p class="footer-copy">
+      &copy; {{ 'now' | date: '%Y' }} The MadGraph5_aMC@NLO development team.
+      MadGraph5_aMC@NLO is released under an adapted University of Illinois/NCSA open-source license.
+    </p>
 
   </div>
 </footer>

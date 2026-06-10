@@ -9,17 +9,18 @@ title: MadGraph Collaboration
     <div class="hero-content">
 
       <div class="hero-headline">
-        <img src="{{ '/assets/images/logo_dark.svg' | relative_url }}" alt="MadGraph logo" class="hero-logo">
+        <img src="{{ '/assets/images/logo_light.svg' | relative_url }}" alt="MadGraph logo" class="hero-logo logo-light">
+        <img src="{{ '/assets/images/logo_dark.svg'  | relative_url }}" alt="" aria-hidden="true" class="hero-logo logo-dark">
         <h1 class="hero-title">MadGraph<br>Collaboration</h1>
       </div>
 
       <p class="hero-subtitle">
-        Precision simulation of particle collisions for the Large Hadron Collider,
-        used by thousands of researchers worldwide.
+        Next-generation precision simulation for collider physics.<br class="hero-subtitle-break">
+        GPU-accelerated, machine-learning-powered, and used by thousands of researchers worldwide.
       </p>
 
       <div class="hero-actions">
-        <a href="{{ site.download_url }}" class="btn btn-primary">
+        <a href="{{ site.mg7_download_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
@@ -33,75 +34,208 @@ title: MadGraph Collaboration
       </div>
 
       <div class="hero-install">
-        <span class="hero-install-label">or install via pip</span>
+        <span class="hero-install-label">install the latest release</span>
         <div class="hero-install-box">
           <span class="hero-install-prompt" aria-hidden="true">$</span>
-          <code class="hero-install-code" id="pip-cmd">pip install madgraph</code>
-          <button class="hero-install-copy" id="pip-copy" aria-label="Copy install command" title="Copy to clipboard">
-            <svg id="pip-copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <code class="hero-install-code" id="cmd-text">pip install madgraph</code>
+          <button class="hero-install-copy" id="cmd-copy" type="button" aria-label="Copy command" title="Copy to clipboard">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
             </svg>
           </button>
         </div>
+        <span class="hero-install-label">
+          Python&nbsp;3 package ·
+          <a href="{{ site.docs_url }}" target="_blank" rel="noopener noreferrer">installation guide</a>
+        </span>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- About -->
+<!-- What's new in MadGraph7 -->
+<section class="whatsnew" id="whats-new">
+  <div class="container">
+    <div class="whatsnew-head">
+      <div class="section-label">What's new in MadGraph7</div>
+      <h2 class="section-title">A faster, smarter generation</h2>
+      <p class="section-lead">
+        MadGraph7 rebuilds the core of the generator around modern hardware and machine
+        learning, while keeping the physics and the familiar workflow intact.
+      </p>
+    </div>
+
+    <div class="nf-grid">
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- chip / GPU -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="1.5"/>
+              <rect x="9.5" y="9.5" width="5" height="5" rx="0.7"/>
+              <path d="M9 6V3M15 6V3M9 21v-3M15 21v-3M6 9H3M6 15H3M21 9h-3M21 15h-3"/>
+            </svg>
+          </div>
+          <span class="nf-badge">GPU</span>
+        </div>
+        <div class="nf-name">GPU-accelerated matrix elements</div>
+        <div class="nf-tool">MadMatrix</div>
+        <p class="nf-desc">Tree-level matrix elements evaluated on GPUs, giving large speed-ups for the most expensive part of event generation.</p>
+      </div>
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- phase space: axes + sampled points -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4v16h16"/>
+              <circle cx="9" cy="14.5" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="12.5" cy="9.5" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="17" cy="11.5" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="14" cy="16" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="18.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <span class="nf-badge">GPU</span>
+        </div>
+        <div class="nf-name">GPU-accelerated phase space</div>
+        <div class="nf-tool">MadSpace</div>
+        <p class="nf-desc">A fully parallel phase-space generator that runs on the same hardware as the matrix elements for end-to-end throughput.</p>
+      </div>
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- neural network -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="5" cy="6" r="1.7"/><circle cx="5" cy="12" r="1.7"/><circle cx="5" cy="18" r="1.7"/>
+              <circle cx="13" cy="9" r="1.7"/><circle cx="13" cy="15" r="1.7"/>
+              <circle cx="20" cy="12" r="1.7"/>
+              <path d="M6.6 6.7 11.5 8.5M6.6 11.6 11.5 9.4M6.6 12.4 11.5 14.6M6.6 17.3 11.5 15.7M14.5 9.5 18.6 11.4M14.5 14.5 18.6 12.6"/>
+            </svg>
+          </div>
+          <span class="nf-badge">ML</span>
+        </div>
+        <div class="nf-name">ML-accelerated event generation</div>
+        <div class="nf-tool">MadNIS</div>
+        <p class="nf-desc">Neural importance sampling that learns the integrand to reduce the cost of integration and unweighting.</p>
+      </div>
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- high multiplicity: vertex fan-out -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="5" cy="12" r="1.9" fill="currentColor" stroke="none"/>
+              <path d="M6.7 11.2 21 5M6.8 11.7 21 9M6.9 12 21 12.5M6.8 12.4 21 16M6.7 12.8 21 20"/>
+            </svg>
+          </div>
+          <span class="nf-badge">Performance</span>
+        </div>
+        <div class="nf-name">Faster high-multiplicity processes</div>
+        <div class="nf-tool">AmpliCol</div>
+        <p class="nf-desc">Improved amplitude and colour handling for processes with many final-state particles.</p>
+      </div>
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- spin / rotation -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.7" fill="currentColor" stroke="none"/>
+              <path d="M12 4.2a7.8 7.8 0 0 1 6.8 4"/>
+              <path d="M12 19.8a7.8 7.8 0 0 1-6.8-4"/>
+              <polyline points="18.8 4 19.1 8.2 15 8"/>
+              <polyline points="5.2 20 4.9 15.8 9 16"/>
+            </svg>
+          </div>
+          <span class="nf-badge">Physics</span>
+        </div>
+        <div class="nf-name">Improved spin correlations</div>
+        <div class="nf-tool">MadSpin</div>
+        <p class="nf-desc">More accurate spin-correlated decays of intermediate resonances in MadSpin.</p>
+      </div>
+
+      <div class="nf-card">
+        <div class="nf-top">
+          <div class="nf-icon">
+            <!-- web interface: dashboard / panels -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="11" y1="9" x2="11" y2="21"/>
+            </svg>
+          </div>
+          <span class="nf-badge">Web</span>
+        </div>
+        <div class="nf-name">Interactive web interface</div>
+        <div class="nf-tool">MadBoard</div>
+        <p class="nf-desc">A new browser interface that replaces the old static HTML run information with an interactive dashboard.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Core capabilities -->
 <section class="about">
   <div class="container">
     <div class="about-grid">
 
       <div>
-        <div class="section-label">About MadGraph</div>
-        <h2 class="section-title">A complete framework for particle physics simulation</h2>
+        <div class="section-label">Core capabilities</div>
+        <h2 class="section-title">A complete framework for collider phenomenology</h2>
         <p class="section-lead">
-          MadGraph is the leading open-source framework for automated generation of
-          matrix elements and Monte Carlo event simulation, supporting tree-level and
-          next-to-leading order (NLO) calculations matched to parton showers.
+          MadGraph7 carries forward the full physics of the MadGraph5_aMC@NLO line —
+          automated matrix elements and Monte&nbsp;Carlo simulation, from leading order for any
+          user-defined Lagrangian to next-to-leading order for models that support it.
         </p>
 
         <ul class="feature-list">
           <li class="feature-item">
             <div class="feature-icon">
+              <!-- NLO: loop / vertex diagram -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                <circle cx="12" cy="12" r="3.5"/>
+                <path d="M3 6 9.1 10.1M3 18 9.1 13.9M21 6 14.9 10.1M21 18 14.9 13.9"/>
               </svg>
             </div>
             <div>
-              <div class="feature-title">Automated NLO Calculations</div>
-              <p class="feature-desc">Full automation of next-to-leading order QCD corrections with FxFx multi-jet merging.</p>
+              <div class="feature-title">Automated NLO calculations</div>
+              <p class="feature-desc">NLO QCD and electroweak corrections to Standard Model processes, with MC@NLO matching to parton showers and FxFx multi-jet merging.</p>
             </div>
           </li>
           <li class="feature-item">
             <div class="feature-icon">
+              <!-- BSM: layered / modular models -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
+                <path d="M12 2.5 2.5 7 12 11.5 21.5 7 12 2.5z"/>
+                <path d="M2.5 12 12 16.5 21.5 12"/>
+                <path d="M2.5 17 12 21.5 21.5 17"/>
               </svg>
             </div>
             <div>
-              <div class="feature-title">BSM Model Support</div>
-              <p class="feature-desc">Seamless integration with FeynRules for beyond-the-Standard-Model physics studies.</p>
+              <div class="feature-title">Any model, including BSM</div>
+              <p class="feature-desc">Simulate any user-defined Lagrangian through the UFO model format, with models from FeynRules for beyond-the-Standard-Model studies.</p>
             </div>
           </li>
           <li class="feature-item">
             <div class="feature-icon">
+              <!-- Parton shower: branching cascade -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="16 3 21 3 21 8"/>
-                <line x1="4" y1="20" x2="21" y2="3"/>
-                <polyline points="21 16 21 21 16 21"/>
-                <line x1="15" y1="15" x2="21" y2="21"/>
+                <circle cx="12" cy="4" r="1.6"/>
+                <circle cx="6.5" cy="13" r="1.6"/><circle cx="17.5" cy="13" r="1.6"/>
+                <circle cx="3.5" cy="20" r="1.3"/><circle cx="9.5" cy="20" r="1.3"/>
+                <circle cx="14.5" cy="20" r="1.3"/><circle cx="20.5" cy="20" r="1.3"/>
+                <path d="M11 5.3 7.5 11.6M13 5.3 16.5 11.6M5.8 14.5 4.2 18.6M7.2 14.5 8.8 18.6M16.8 14.5 15.2 18.6M18.2 14.5 19.8 18.6"/>
               </svg>
             </div>
             <div>
-              <div class="feature-title">Parton Shower Matching</div>
-              <p class="feature-desc">Interfaces to Pythia, Herwig, and Sherpa for complete event simulation chains.</p>
+              <div class="feature-title">Parton-shower matching</div>
+              <p class="feature-desc">Standard Les Houches event output with automated interfaces to Pythia8 and Herwig for complete event-simulation chains.</p>
             </div>
           </li>
         </ul>
@@ -109,18 +243,17 @@ title: MadGraph Collaboration
 
       <div>
         <div class="info-card">
-          <div class="info-card-label">What's new in MadGraph7</div>
+          <div class="info-card-label">Inside MadGraph</div>
           <ul class="info-card-list">
-            <li>NNLO+PS matched predictions</li>
-            <li>GPU-accelerated matrix elements</li>
-            <li>Native Python 3 interface</li>
-            <li>Automated EW corrections</li>
-            <li>Expanded BSM model library</li>
-            <li>Cloud-native workflow support</li>
-            <li>Improved multi-parton merging</li>
+            <li>Tree-level &amp; one-loop matrix elements for arbitrary processes</li>
+            <li>NLO QCD and electroweak corrections (Standard Model)</li>
+            <li>Parton-shower matching (MC@NLO) and multi-jet merging (FxFx, MLM)</li>
+            <li>Loop-induced processes via MadLoop</li>
+            <li>Spin-correlated decays with MadSpin</li>
+            <li>Python&nbsp;3 command interface and scriptable runs</li>
           </ul>
-          <a href="{{ site.github_url }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center;">
-            View on GitHub
+          <a href="{{ site.docs_url }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center;">
+            Read the documentation
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/>
               <polyline points="12 5 19 12 12 19"/>
@@ -133,19 +266,69 @@ title: MadGraph Collaboration
   </div>
 </section>
 
+<!-- Resources -->
+<section class="resources">
+  <div class="container">
+    <div class="resources-head">
+      <div class="section-label">Get started &amp; find help</div>
+      <h2 class="section-title">Documentation and support</h2>
+      <p class="section-lead">
+        Everything you need to install MadGraph7, and get help.
+      </p>
+    </div>
+
+    <div class="resource-grid">
+
+      <a class="resource-card" href="{{ site.docs_url }}" target="_blank" rel="noopener noreferrer">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="resource-title">Documentation</div>
+        <p class="resource-desc">Installation, tutorials, and the full user guide for MadGraph7.</p>
+        <span class="resource-host">docs.madgraph.org</span>
+      </a>
+
+      <a class="resource-card" href="{{ site.mg7_issues_url }}" target="_blank" rel="noopener noreferrer">
+        <div class="resource-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <div class="resource-title">Questions &amp; support</div>
+        <p class="resource-desc">Report bugs and ask about MadGraph7 on the GitHub issue tracker.</p>
+        <span class="resource-host">github.com/MadGraphTeam/MadGraph7/issues</span>
+      </a>
+
+    </div>
+
+    <!-- Legacy / older versions -->
+    <div class="legacy-note">
+      <p>
+        <strong>Looking for MadGraph5_aMC@NLO?</strong>
+        The current stable release (v{{ site.mg5_version }}) remains available on
+        <a href="{{ site.download_url }}" target="_blank" rel="noopener noreferrer">Launchpad</a>,
+        with source on <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        and download mirrors at
+        <a href="{{ site.mirror_infn }}" target="_blank" rel="noopener noreferrer">INFN&nbsp;Milan</a>
+        and <a href="{{ site.mirror_ucl }}" target="_blank" rel="noopener noreferrer">UCLouvain</a>.
+        It can also be run online via
+        <a href="{{ site.online_url }}" target="_blank" rel="noopener noreferrer">NLOAccess</a>,
+        and questions are answered on the
+        <a href="{{ site.launchpad_faq }}" target="_blank" rel="noopener noreferrer">Launchpad Answers</a> forum.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-banner">
   <div class="container">
     <h2>Ready to get started?</h2>
-    <p>Download MadGraph7 and explore the documentation to run your first simulation.</p>
+    <p>Install MadGraph7 and follow the documentation to run your first simulation.</p>
     <div class="cta-actions">
-      <a href="{{ site.download_url }}" class="btn btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
+      <a href="{{ site.docs_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        Read the documentation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
         </svg>
-        Download Now
       </a>
       <a href="{{ '/team/' | relative_url }}" class="btn btn-outline">Meet the Team</a>
     </div>

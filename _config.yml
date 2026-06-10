@@ -16,7 +16,28 @@ sass:
 plugins:
   - jekyll-seo-tag
 
-# External links
-github_url: "https://github.com/MadGraphTeam/MadGraph7"
-docs_url: "https://docs.madgraph.org"
-download_url: "https://github.com/MadGraphTeam/MadGraph7/releases/latest"
+# ------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Legacy stable release (MadGraph5_aMC@NLO) — linked from the footer
+# ------------------------------------------------------------------
+mg5_version: "3.7.1"
+
+# Primary links
+github_url:    "https://github.com/mg5amcnlo/mg5amcnlo"        # MadGraph5_aMC@NLO source (3.x)
+download_url:  "https://launchpad.net/mg5amcnlo"               # legacy release downloads
+docs_url:      "https://docs.madgraph.org"                     # MadGraph7 documentation
+
+# Resource / mirror links (used on the home page)
+launchpad_url:  "https://launchpad.net/mg5amcnlo"
+launchpad_faq:  "https://answers.launchpad.net/mg5amcnlo"
+online_url:     "https://nloaccess.in2p3.fr/tools/MG5/index"   # run online (NLOAccess) — MG5
+mirror_infn:    "https://madgraph.mi.infn.it"                  # download mirror (INFN, Milan)
+mirror_ucl:     "https://madgraph.phys.ucl.ac.be"              # download mirror (UCLouvain)
+
+# MadGraph7 links
+mg7_github_url:   "https://github.com/MadGraphTeam/MadGraph7"
+mg7_issues_url:   "https://github.com/MadGraphTeam/MadGraph7/issues"
+madboard_url:     "https://github.com/MadGraphTeam/MadBoard"
+# TODO: point this at the real MadGraph7 release once available.
+# Placeholder: MadSpace stable releases.
+mg7_download_url: "https://github.com/MadGraphTeam/MadSpace/releases"

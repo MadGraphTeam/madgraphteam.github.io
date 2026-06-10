@@ -8,6 +8,22 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="192x192" href="{{ '/assets/images/favicon-192.png' | relative_url }}">
+
+  <!-- Set the theme before first paint to avoid a flash of the wrong theme.
+       Order of preference: explicit stored choice > OS preference > light. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('mg-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% seo %}
 </head>
@@ -17,35 +33,60 @@
     {{ content }}
   </main>
   {% include footer.html %}
+
   <script>
-    var toggle = document.getElementById('nav-toggle');
-    var menu = document.getElementById('nav-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', function() {
+    // ---- Theme toggle --------------------------------------------------
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('mg-theme', next); } catch (e) {}
+      });
+      // Follow OS changes only when the user hasn't made an explicit choice.
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+          try { if (localStorage.getItem('mg-theme')) return; } catch (err) {}
+          root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
+      }
+    })();
+
+    // ---- Mobile navigation --------------------------------------------
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
         var open = menu.classList.toggle('is-open');
         toggle.setAttribute('aria-expanded', String(open));
       });
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         if (!toggle.contains(e.target) && !menu.contains(e.target)) {
           menu.classList.remove('is-open');
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
-    }
-    var copyBtn = document.getElementById('pip-copy');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function() {
-        var text = document.getElementById('pip-cmd').textContent;
-        navigator.clipboard.writeText(text).then(function() {
+    })();
+
+    // ---- Copy-to-clipboard for the quick-start command ----------------
+    (function () {
+      var copyBtn = document.getElementById('cmd-copy');
+      var cmd = document.getElementById('cmd-text');
+      if (!copyBtn || !cmd) return;
+      copyBtn.addEventListener('click', function () {
+        navigator.clipboard.writeText(cmd.textContent.trim()).then(function () {
           copyBtn.classList.add('copied');
           copyBtn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
-          setTimeout(function() {
+          setTimeout(function () {
             copyBtn.classList.remove('copied');
-            copyBtn.innerHTML = '<svg id="pip-copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            copyBtn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
           }, 2000);
         });
       });
-    }
+    })();
   </script>
 </body>
 </html>
